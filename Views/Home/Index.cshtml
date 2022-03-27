@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Главная";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>Список Студентов</h3>
+        <table>
+            <tr>
+                <td><p>Имя студента</p></td>
+                <td><p>Отчество студента</p></td>
+                <td><p>Фамилия студента</p></td>
+                <td><p>Курс</p></td>
+                <td><p>Балл (по шкале от 1 до 100)</p></td>
+            </tr>
+
+            @foreach (var c in ViewBag.Students)
+            {
+                <tr>
+                    <td><p>@c.FirstName</p></td>
+                    <td><p>@c.PaternalName</p></td>
+                    <td><p>@c.LastlName</p></td>
+                    <td><p>@c.CourcelHead</p></td>
+                    <td><p>@c.Grade</p></td>
+                </tr>
+            }
+        </table>
+        <p><a class="btn btn-default" href="/Home/CreateBid">Подать заявку на получение кредита&raquo;</a></p>
+    </div>
+</div>
